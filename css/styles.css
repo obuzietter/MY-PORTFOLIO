@@ -1,36 +1,58 @@
-*{
+:root {
+    --orange: #f78536;
+    --light: #dfebed;
+    --green: #497285;
+    --dark: #2b4450;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* color: white; */
 }
 
-body{
+body {
     display: flex;
     height: 100vh;
+    /* background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); */
+    background-color: var(--light);
 }
-header{
+
+header {
     flex-basis: 50%;
     display: grid;
     place-items: center;
 }
-main{
+
+main {
     /* flex-basis: 50%; */
-    
+
 }
-main .about-me{
+
+main .about-me {
     padding: 5px;
 }
-main .about-me p{
+
+main .about-me p {
     margin: 5px;
     padding: 5px;
 }
-main .projects-container{
+
+main .projects-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    
+
 }
-main .projects-container .card{
+
+main .projects-container .card {
     margin: 5px;
     width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--light);
+    background-color: #2b4450;
+
 }
