@@ -24,11 +24,13 @@ header {
     flex-basis: 50%;
     display: grid;
     place-items: center;
+    
+    
 }
 
 main {
     /* flex-basis: 50%; */
-
+    
 }
 
 main .about-me {
@@ -39,7 +41,9 @@ main .about-me p {
     margin: 5px;
     padding: 5px;
 }
-
+main .skills-container{
+    display: flex;
+}
 main .projects-container {
     display: flex;
     justify-content: center;
@@ -50,9 +54,28 @@ main .projects-container {
 main .projects-container .card {
     margin: 5px;
     width: 300px;
-    padding: 5px;
+    /* padding: 5px; */
     border-radius: 10px;
     color: var(--light);
     background-color: #2b4450;
-
+    padding: 10px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    margin: 20px;
+}
+main .projects-container .card:hover{
+    scale: 1.10;
+}
+main .projects-container .card .card-footer{
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .projects-container .card .card-footer span{
+    padding: 5px 10px;
+    background-color: var(--orange);
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 5px 5px 15px var(--orange);
+    font-weight: 700;
 }
