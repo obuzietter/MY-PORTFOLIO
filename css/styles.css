@@ -24,13 +24,14 @@ header {
     flex-basis: 50%;
     display: grid;
     place-items: center;
-    
-    
+
+
 }
 
 main {
     /* flex-basis: 50%; */
-    
+    padding: 30px;
+
 }
 
 main .about-me {
@@ -40,10 +41,77 @@ main .about-me {
 main .about-me p {
     margin: 5px;
     padding: 5px;
+    font-size: 1.5rem;
 }
-main .skills-container{
+
+main .skills-container {
+    /* border: 1px solid black; */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+main .skills-container .skill {
+    /* border: 1px solid black; */
+    /* padding: 5px; */
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 55px var(--dark);
+    border-radius: 10px;
+    cursor: default;
+   
+
+}
+
+main .skills-container .skill:hover .description {
+    /* transform: translate(-100%, -100%); */
+    opacity: 1;
+}
+
+main .skills-container .skill .img {
+    height: 400px;
+    width: 400px;
+    transition: .2s ease-in-out;
+    /* background-image: url(../media/me.JPG); */
+    /* background-position: center;
+    background-size: cover; */
+}
+
+main .skills-container .skill:hover .img {
+    scale: 1.1;
+}
+
+main .skills-container .skill .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+main .skills-container .skill .description {
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+    color: var(--dark);
+    backdrop-filter: blur(5px);
+    background-color: rgba(223, 235, 237, 0.8);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid var(--orange); */
+}
+main .skills-container .skill .description p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 main .projects-container {
     display: flex;
     justify-content: center;
@@ -56,64 +124,31 @@ main .projects-container .card {
     width: 300px;
     /* padding: 5px; */
     border-radius: 10px;
-    color: var(--light);
-    background-color: #2b4450;
+    color: var(--dark);
+    box-shadow: 5px 5px 15px var(--green);
+    background-color: var(--light);
     padding: 10px;
     transition: .2s ease-in-out;
     cursor: pointer;
     margin: 20px;
+    font-size: 1.5rem;
 }
-main .projects-container .card:hover{
-    scale: 1.10;
+
+main .projects-container .card:hover {
+    scale: 1.04;
 }
-main .projects-container .card .card-footer{
+
+main .projects-container .card .card-footer {
     padding: 5px 10px;
     display: flex;
     flex-wrap: wrap;
 }
-main .projects-container .card .card-footer span{
+
+main .projects-container .card .card-footer span {
     padding: 5px 10px;
     background-color: var(--orange);
     border-radius: 10px;
     margin: 5px;
-    box-shadow: 5px 5px 15px var(--orange);
+    box-shadow: 5px 5px 15px var(--green);
     font-weight: 700;
-}
-main .skills-container{
-    /* border: 1px solid black; */
-    display: flex;
-    flex-wrap: wrap;
-}
-main .skills-container .skill{
-    /* border: 1px solid black; */
-    /* padding: 5px; */
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 55px var(--dark);
-    border-radius: 10px;
-    cursor: default;
-    
-}
-main .skills-container .skill:hover .description{
-    transform: translate(-100%, -100%);
-}
-main .skills-container .skill .img{
-    height: 300px;
-    width: 300px;
-    /* background-image: url(../media/me.JPG); */
-    background-position: center;
-    background-size: cover;
-}
-main .skills-container .skill .description{
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    transition: .2s ease-in-out;
-    color: var(--light);
-    backdrop-filter: blur(5px);
-    height: 100%;
-    width: 100%;
-    padding: 10px;    
 }
