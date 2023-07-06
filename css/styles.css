@@ -24,6 +24,7 @@ header {
     flex-basis: 50%;
     display: grid;
     place-items: center;
+    border: 3px solid red;
 
 
 }
@@ -31,6 +32,7 @@ header {
 main {
     /* flex-basis: 50%; */
     padding: 30px;
+    overflow-y: scroll;
 
 }
 
@@ -155,15 +157,33 @@ main .projects-container .card .card-footer span {
 
 main .services{
     display: flex;
+    flex-wrap: wrap;
 }
 main .services .service{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     margin: 10px;
     /* padding: 10px; */
     position: relative;
     height: 400px;
     width: 400px;
     overflow: hidden;
+    border-radius: 10px;
+}
+main .services .service:hover .service-image img{
+    scale: 1.03;
+    
+}
+main .services .service:hover .service-body {
+    top: 0;
+    background-color: rgba(73, 114, 133, 0.8);
+}
+main .services .service:hover .service-body p{
+    visibility: visible
+}
+main .services .service:hover .service-body h1{
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+    
 }
 main .services .service .service-image{
     width: 100%;
@@ -173,6 +193,8 @@ main .services .service .service-image{
 main .services .service .service-image img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: .2s ease-in-out;
 }
 main .services .service .service-body{
     position: absolute;
@@ -180,7 +202,55 @@ main .services .service .service-body{
     padding: 10px;
     font-size: 1.2rem;
     color: var(--light);
-    background-color: rgba(73, 114, 133, 0.8);
+    background-color: rgb(43, 68, 80);
     height: 100%;
+    transition: .2s ease;
     
+}
+main .services .service .service-body h1{
+    text-align: center;
+    transition: .5s linear;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    
+    
+}
+main .services .service .service-body p{
+    visibility: hidden;
+    text-align: center;
+    transition: .2s linear;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
