@@ -220,37 +220,35 @@ main .services .service .service-body p{
     text-align: center;
     transition: .2s linear;
 }
-form {
-  max-width: 400px;
-  margin: 0 auto;
+
+/* CONTACT FORM */
+.contact {
+    display: grid;
+    place-items:center ;
+    padding: 4rem 0rem;
+}
+.contact form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact form input, textarea{
+    width: 60%;
+    margin: 10px 0px;
+    padding: 15px 10px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+input::placeholder{
+    color: var(--green);
 }
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 15px;
+textarea::placeholder{
+    color: var(--green);
 }
-
-textarea {
-  height: 150px;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
+input[type="submit"]{
+    color: var(--orange);
 }
