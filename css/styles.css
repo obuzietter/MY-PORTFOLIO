@@ -157,12 +157,12 @@ main .projects-container .card .card-footer span {
 
 main .services{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 main .services .service{
-    /*border: 1px solid black;*/
+    cursor: default;
     margin: 10px;
-    /* padding: 10px; */
     position: relative;
     height: 400px;
     width: 400px;
