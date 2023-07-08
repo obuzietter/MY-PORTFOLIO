@@ -250,5 +250,12 @@ textarea::placeholder{
     color: var(--green);
 }
 input[type="submit"]{
-    color: var(--orange);
+    color: var(--light);
+    background-color: var(--green);
+    width: 30%;
+    transition: .2s ease;
+}
+input[type="submit"]:hover{
+    background-color:var( --orange );
+    color: var(--light);
 }
