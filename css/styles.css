@@ -253,9 +253,10 @@ input[type="submit"]{
     color: var(--light);
     background-color: var(--green);
     width: 30%;
-    transition: .2s ease;
+    transition: .5s ease;
 }
 input[type="submit"]:hover{
     background-color:var( --orange );
     color: var(--light);
+    transform: rotateY(360deg);
 }
