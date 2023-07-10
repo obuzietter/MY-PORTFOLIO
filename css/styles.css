@@ -228,19 +228,24 @@ main .services .service .service-body p{
     padding: 4rem 0rem;
 }
 .contact form {
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: #2b4450 2px solid; */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 55px var(--dark);
 }
 .contact form input, textarea{
-    width: 60%;
+    width: 100%;
     margin: 10px 0px;
     padding: 15px 10px;
     border-style: none;
     border-radius: 10px;
     font-size: 1.5rem;
+    border-bottom: 1px solid var(--dark);
 }
 
 input::placeholder{
