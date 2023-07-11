@@ -24,9 +24,27 @@ header {
     flex-basis: 50%;
     display: grid;
     place-items: center;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 
 
+}
+header .hero ul{
+    list-style: none;
+    padding: 5px;
+}
+header .hero ul li{
+    margin: 5px;
+}
+header .hero ul li a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 900;
+    font-size: 1.5rem;
+    transition: .2s linear;
+}
+header .hero ul li a:hover{
+    color: var(--orange);
+    text-decoration: underline;
 }
 
 main {
@@ -263,5 +281,5 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color:var( --orange );
     color: var(--light);
-    transform: rotateY(360deg);
+    transform: rotateX(360deg);
 }
