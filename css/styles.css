@@ -62,10 +62,13 @@ header .hero .intro {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  color: var(--dark);
 }
-
+header .hero .intro h3{
+    font-size: 1.5rem;
+}
 header .hero .intro p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 header .hero ul {
@@ -81,7 +84,7 @@ header .hero ul li a {
   text-decoration: none;
   color: var(--dark);
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 0.2s linear;
 }
 
