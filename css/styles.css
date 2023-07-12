@@ -1,333 +1,370 @@
 :root {
-    --orange: #f78536;
-    --light: #dfebed;
-    --green: #497285;
-    --dark: #2b4450;
+  --orange: #f78536;
+  --light: #dfebed;
+  --green: #497285;
+  --dark: #2b4450;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* border: 1px solid black; */
-    /* color: white; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  animation: pageload .5s normal;
 }
 
 body {
-    display: flex;
-    height: 100vh;
-    background-color: var(--light);
+  display: flex;
+  height: 100vh;
+  background-color: var(--light);
+  position: relative;
+}
+
+.scroll-up {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  z-index: 50;
+}
+
+.scroll-up a {
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-up img {
+  height: 100%;
+  width: 100%;
 }
 
 header {
-    flex-basis: 50%;
-    display: grid;
-    place-items: center;
-    /* border: 3px solid red; */
+  flex-basis: 50%;
+  display: grid;
+  place-items: center;
+  /* border: 3px solid red; */
+}
 
+header .hero .display-picture {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
-header .hero .display-picture{
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-header .hero .display-picture img{
-    height: 200px;
-    width: 200px;
-   border-radius: 50%;
-   object-fit: fill;
-   box-shadow: 5px 5px 5px var(--dark);
 
+header .hero .display-picture img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: fill;
+  box-shadow: 5px 5px 5px var(--dark);
 }
-header .hero .intro{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+
+header .hero .intro {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-header .hero .intro p{
-    font-size: 1.1rem;
+
+header .hero .intro p {
+  font-size: 1.1rem;
 }
-header .hero ul{
-    list-style: none;
-    padding: 5px;
+
+header .hero ul {
+  list-style: none;
+  padding: 5px;
 }
-header .hero ul li{
-    margin: 5px;
+
+header .hero ul li {
+  margin: 5px;
 }
-header .hero ul li a{
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 900;
-    font-size: 1.5rem;
-    transition: .2s linear;
+
+header .hero ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 900;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
 }
-header .hero ul li a:hover{
-    color: var(--orange);
-    text-decoration: underline;
+
+header .hero ul li a:hover {
+  color: var(--orange);
+  text-decoration: underline;
 }
 
 main {
-    padding: 30px;
-    overflow-y: scroll;
-
+  padding: 30px;
+  overflow-y: scroll;
 }
 
 main .about-me {
-    padding: 5px;
+  padding: 5px;
 }
 
 main .about-me p {
-    margin: 5px;
-    padding: 5px;
-    font-size: 1.5rem;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.5rem;
 }
-.title{
-    /* border: 1px solid black; */
-    padding: 35px 0px;
-    text-align: center;
-    font-size: 1.9rem;
+
+.title {
+  /* border: 1px solid black; */
+  padding: 35px 0px;
+  text-align: center;
+  font-size: 1.9rem;
 }
+
 main .skills-container {
-    /* border: 1px solid black; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 main .skills-container .skill {
-    /* border: 1px solid black; */
-    /* padding: 5px; */
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 55px var(--dark);
-    border-radius: 10px;
-    cursor: default;
-   
-
+  /* border: 1px solid black; */
+  /* padding: 5px; */
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 55px var(--dark);
+  border-radius: 10px;
+  cursor: default;
 }
 
 main .skills-container .skill:hover .description {
-    /* transform: translate(-100%, -100%); */
-    opacity: 1;
+  /* transform: translate(-100%, -100%); */
+  opacity: 1;
 }
 
 main .skills-container .skill .img {
-    height: 400px;
-    width: 400px;
-    transition: .2s ease-in-out;
-    /* background-image: url(../media/me.JPG); */
-    /* background-position: center;
+  height: 400px;
+  width: 400px;
+  transition: 0.2s ease-in-out;
+  /* background-image: url(../media/me.JPG); */
+  /* background-position: center;
     background-size: cover; */
 }
 
 main .skills-container .skill:hover .img {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 main .skills-container .skill .img img {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
 main .skills-container .skill .description {
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .2s ease-in-out;
-    color: var(--dark);
-    backdrop-filter: blur(5px);
-    background-color: rgba(223, 235, 237, 0.8);
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid var(--orange); */
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+  color: var(--dark);
+  backdrop-filter: blur(5px);
+  background-color: rgba(223, 235, 237, 0.8);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid var(--orange); */
 }
-main .skills-container .skill .description p{
-    text-align: center;
-    font-size: 1.5rem;
+
+main .skills-container .skill .description p {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 main .projects-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 main .projects-container .card {
-    margin: 5px;
-    width: 300px;
-    /* padding: 5px; */
-    border-radius: 10px;
-    color: var(--dark);
-    box-shadow: 5px 5px 15px var(--green);
-    background-color: var(--light);
-    padding: 10px;
-    transition: .2s ease-in-out;
-    cursor: pointer;
-    margin: 20px;
-    font-size: 1.5rem;
+  margin: 5px;
+  width: 300px;
+  /* padding: 5px; */
+  border-radius: 10px;
+  color: var(--dark);
+  box-shadow: 5px 5px 15px var(--green);
+  background-color: var(--light);
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 1.5rem;
 }
 
 main .projects-container .card:hover {
-    scale: 1.04;
+  scale: 1.04;
 }
 
 main .projects-container .card .card-footer {
-    padding: 5px 10px;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 main .projects-container .card .card-footer span {
-    padding: 5px 10px;
-    background-color: var(--orange);
-    border-radius: 10px;
-    margin: 5px;
-    box-shadow: 5px 5px 15px var(--green);
-    font-weight: 700;
+  padding: 5px 10px;
+  background-color: var(--orange);
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 15px var(--green);
+  font-weight: 700;
 }
 
-main .services{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+main .services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-main .services .service{
-    cursor: default;
-    margin: 10px;
-    position: relative;
-    height: 400px;
-    width: 400px;
-    overflow: hidden;
-    border-radius: 10px;
+
+main .services .service {
+  cursor: default;
+  margin: 10px;
+  position: relative;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
 }
-main .services .service:hover .service-image img{
-    scale: 1.03;
-    
+
+main .services .service:hover .service-image img {
+  scale: 1.03;
 }
+
 main .services .service:hover .service-body {
-    top: 0;
-    background-color: rgba(73, 114, 133, 0.8);
+  top: 0;
+  background-color: rgba(73, 114, 133, 0.8);
 }
-main .services .service:hover .service-body p{
-    visibility: visible
+
+main .services .service:hover .service-body p {
+  visibility: visible;
 }
-main .services .service:hover .service-body h1{
-    color: var(--orange);
-    border-bottom: 2px solid var(--orange);
-    
+
+main .services .service:hover .service-body h1 {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
 }
-main .services .service .service-image{
-    width: 100%;
-    height: 100%;
-    
+
+main .services .service .service-image {
+  width: 100%;
+  height: 100%;
 }
-main .services .service .service-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .2s ease-in-out;
+
+main .services .service .service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s ease-in-out;
 }
-main .services .service .service-body{
-    position: absolute;
-    top: 75%;
-    padding: 10px;
-    font-size: 1.2rem;
-    color: var(--light);
-    background-color: rgb(43, 68, 80);
-    height: 100%;
-    transition: .2s ease;
-    
+
+main .services .service .service-body {
+  position: absolute;
+  top: 75%;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--light);
+  background-color: rgb(43, 68, 80);
+  height: 100%;
+  transition: 0.2s ease;
 }
-main .services .service .service-body h1{
-    text-align: center;
-    transition: .5s linear;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    
-    
+
+main .services .service .service-body h1 {
+  text-align: center;
+  transition: 0.5s linear;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
-main .services .service .service-body p{
-    visibility: hidden;
-    text-align: center;
-    transition: .2s linear;
+
+main .services .service .service-body p {
+  visibility: hidden;
+  text-align: center;
+  transition: 0.2s linear;
 }
 
 /* CONTACT FORM */
 .contact {
-    display: grid;
-    place-items:center ;
-    padding: 4rem 0rem;
+  display: grid;
+  place-items: center;
+  padding: 4rem 0rem;
 }
+
 .contact form {
-    width: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: #2b4450 2px solid; */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 55px var(--dark);
+}
+
+.contact form input,
+textarea {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 15px 10px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--dark);
+}
+
+input::placeholder {
+  color: var(--green);
+}
+
+textarea::placeholder {
+  color: var(--green);
+}
+
+input[type="submit"] {
+  color: var(--light);
+  background-color: var(--green);
+  transition: 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--orange);
+  color: var(--light);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: #2b4450 2px solid; */
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 55px var(--dark);
-}
-.contact form input, textarea{
-    width: 100%;
-    margin: 10px 0px;
-    padding: 15px 10px;
-    border-style: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    border-bottom: 1px solid var(--dark);
-}
-
-input::placeholder{
-    color: var(--green);
-}
-textarea::placeholder{
-    color: var(--green);
-}
-input[type="submit"]{
-    color: var(--light);
-    background-color: var(--green);
-    width: 30%;
-    transition: .5s ease;
-}
-/* input[type="submit"]:hover{
-    background-color:var( --orange );
-    color: var(--light);
-    transform: rotateX(360deg);
-} */
-
-@media only screen and (max-width: 600px){
-    body {
-        display: flex;
-        flex-direction: column;
-        /* height: 100vh; */
-        background-color: var(--light);
-    }
-    main {
-        padding: 30px;
-        overflow-y: visible;
     
+  }
+
+  main {
+    padding: 30px;
+    overflow-y: visible;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+
+  .scroll-up {
+    position: fixed;
+    
+  }
+}
+
+@keyframes pageload {
+    from{
+        opacity: 0;
     }
-    .contact form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* border: #2b4450 2px solid; */
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 5px 5px 55px var(--dark);
+    to{
+        opacity: 1;
     }
 }
