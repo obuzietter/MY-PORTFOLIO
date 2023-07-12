@@ -16,7 +16,6 @@
 body {
     display: flex;
     height: 100vh;
-    /* background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); */
     background-color: var(--light);
 }
 
@@ -26,7 +25,27 @@ header {
     place-items: center;
     /* border: 3px solid red; */
 
+}
+header .hero .display-picture{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+header .hero .display-picture img{
+    height: 200px;
+    width: 200px;
+   border-radius: 50%;
+   object-fit: fill;
+   box-shadow: 5px 5px 5px var(--dark);
 
+}
+header .hero .intro{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+header .hero .intro p{
+    font-size: 1.1rem;
 }
 header .hero ul{
     list-style: none;
@@ -48,7 +67,6 @@ header .hero ul li a:hover{
 }
 
 main {
-    /* flex-basis: 50%; */
     padding: 30px;
     overflow-y: scroll;
 
@@ -63,7 +81,12 @@ main .about-me p {
     padding: 5px;
     font-size: 1.5rem;
 }
-
+.title{
+    /* border: 1px solid black; */
+    padding: 35px 0px;
+    text-align: center;
+    font-size: 1.9rem;
+}
 main .skills-container {
     /* border: 1px solid black; */
     display: flex;
@@ -278,8 +301,33 @@ input[type="submit"]{
     width: 30%;
     transition: .5s ease;
 }
-input[type="submit"]:hover{
+/* input[type="submit"]:hover{
     background-color:var( --orange );
     color: var(--light);
     transform: rotateX(360deg);
+} */
+
+@media only screen and (max-width: 600px){
+    body {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        background-color: var(--light);
+    }
+    main {
+        padding: 30px;
+        overflow-y: visible;
+    
+    }
+    .contact form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: #2b4450 2px solid; */
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 55px var(--dark);
+    }
 }
