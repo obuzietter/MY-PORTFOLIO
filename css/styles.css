@@ -41,6 +41,7 @@ header {
   flex-basis: 50%;
   display: grid;
   place-items: center;
+  padding: 0px 30px;
   /* border: 3px solid red; */
 }
 
@@ -96,10 +97,13 @@ header .hero ul li a:hover {
 main {
   padding: 30px;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 main .about-me {
   padding: 5px;
+  scroll-snap-align: start;
 }
 
 main .about-me p {
@@ -114,7 +118,9 @@ main .about-me p {
   text-align: center;
   font-size: 1.9rem;
 }
-
+main .tech-stack{
+  scroll-snap-align: start;
+}
 main .skills-container {
   /* border: 1px solid black; */
   display: flex;
@@ -181,7 +187,9 @@ main .skills-container .skill .description p {
   text-align: center;
   font-size: 1.5rem;
 }
-
+main .projects{
+  scroll-snap-align: start;
+}
 main .projects-container {
   display: flex;
   justify-content: center;
@@ -221,7 +229,9 @@ main .projects-container .card .card-footer span {
   box-shadow: 5px 5px 15px var(--green);
   font-weight: 700;
 }
-
+main .my-services{
+  scroll-snap-align: start;
+}
 main .services {
   display: flex;
   justify-content: center;
@@ -297,6 +307,7 @@ main .services .service .service-body p {
   display: grid;
   place-items: center;
   padding: 4rem 0rem;
+  scroll-snap-align: start;
 }
 
 .contact form {
@@ -351,6 +362,7 @@ input[type="submit"]:hover {
   main {
     padding: 30px;
     overflow-y: visible;
+    scroll-behavior: smooth;
   }
 
   .contact form {
