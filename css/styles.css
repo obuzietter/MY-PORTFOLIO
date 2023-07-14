@@ -46,6 +46,7 @@ header {
   display: grid;
   place-items: center;
   padding: 0px 30px;
+  scroll-snap-type: y mandatory;
   /* border: 3px solid red; */
 }
 
@@ -101,7 +102,7 @@ header .hero ul li a:hover {
 main {
   padding: 30px;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
